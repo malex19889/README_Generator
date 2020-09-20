@@ -4,47 +4,47 @@ var fs = require("fs")
 const questions = [
     {
         type: "input",
-        name: "Title",
+        name: "title",
         message: "Please enter your project title"
     },
     {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "please enter a description"
     },
     {
         type: "input",
-        name: "Table of Contents",
+        name: "toc",
         message: "please enter Table of Contents items seperated by a ,"
     },
     {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "Please enter your project installation steps"
     },
     {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "Please enter your project Usage"
     },
     {
         type: "input",
-        name: "License",
+        name: "license",
         message: "Please enter any License info"
     },
     {
         type: "input",
-        name: "Contributing",
+        name: "contributing",
         message: "Please enter info for Contributing"
     },
     {
         type: "input",
-        name: "Tests",
+        name: "tests",
         message: "Please enter any tests"
     },
     {
         type: "input",
-        name: "Questions",
+        name: "questions",
         message: "Please enter info for Questions"
     },
 
@@ -58,9 +58,16 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions)
+    .then(function(data){
+        console.log(data)
+    })
 }
-function validInput(input){
-
-}
+// function validInput(input){
+    
+//         if (input === " ") {
+//            return 'Incorrect asnwer';
+//         }
+//         console.log("next question");
+// }
 // function call to initialize program
 init();
