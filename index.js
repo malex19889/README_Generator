@@ -59,6 +59,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
 }
+function validInput(input){
 
+}
 // function call to initialize program
 init();
