@@ -1,5 +1,6 @@
 var inquirer = require("inquirer")
 var fs = require("fs")
+const generateMd = require("./utils/generateMarkdown.js")
 // array of questions for user
 const questions = [
     {
@@ -56,11 +57,16 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
-function init() {
-    inquirer.prompt(questions)
-    .then(function(data){
-        console.log(data)
-    })
+async function init() {
+    try {
+       const answers = await userPrompts(questions) 
+       const readme = generateMd(answers)
+       console.log(readme);
+    } catch (err) {
+        console.log(err)
+    }
+}function userPrompts(){
+   return inquirer.prompt(questions)  
 }
 // function validInput(input){
     
