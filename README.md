@@ -10,6 +10,7 @@ When creating an open source project on GitHub, it is important to have a qualit
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
+* [Links](#Links)
 
 ## Installation
 
@@ -34,3 +35,8 @@ N/A
 ## Questions
 
 N/A
+
+## Links
+github repo: https://github.com/malex19889/README_Generator.git
+
+Run Video: https://drive.google.com/file/d/1u0qvANO0_w5RmAdcp1xr7sU5RzPhYlIv/view
