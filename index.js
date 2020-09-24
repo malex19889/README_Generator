@@ -59,7 +59,7 @@ async function init() {
     try {
        const answers = await userPrompts(questions); 
        const readme = generateMd(answers);
-       const fileName = answers.title+".md";
+       const fileName = answers.title+"-README.md";
        await writeToFile(fileName,readme)
     } catch (err) {
         console.log(err)
